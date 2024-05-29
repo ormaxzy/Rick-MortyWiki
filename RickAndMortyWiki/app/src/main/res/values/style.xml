@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Цвет верхнего экшнбара -->
+        <item name="android:statusBarColor">#FF424242</item>
+    </style>
+</resources>

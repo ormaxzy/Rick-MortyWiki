@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/paginationFragment">
+
+    <fragment
+        android:id="@+id/paginationFragment"
+        android:name="com.example.rickandmortywiki.presentation.paginationScreen.PaginationFragment"
+        android:label="fragment_pagination"
+        tools:layout="@layout/fragment_pagination" >
+        <action
+            android:id="@+id/action_paginationFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
+        <action
+            android:id="@+id/action_paginationFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.rickandmortywiki.presentation.locationScreen.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_locationFragment_to_paginationFragment"
+            app:destination="@id/paginationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterDetailFragment"
+        android:name="com.example.rickandmortywiki.presentation.characterDetailScreen.CharacterDetailFragment"
+        android:label="fragment_character_detail"
+        tools:layout="@layout/fragment_character_detail" >
+        <argument
+            android:name="character"
+            app:argType="com.example.rickandmortywiki.api.Character" />
+        <action
+            android:id="@+id/action_characterDetailFragment_to_paginationFragment"
+            app:destination="@id/paginationFragment" />
+    </fragment>
+</navigation>
