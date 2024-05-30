@@ -10,9 +10,6 @@ Rick and Morty Wiki - это приложение, которое отображ
 ### Работа с сетью: 
 Я использовал Retrofit для получения данных о персонажах и местах из API сериала "Рик и Морти".
 
-### Clean Architecture: 
-Я применил принципы чистой архитектуры, разделив приложение на несколько слоев (презентация, доменная логика, данные), что обеспечивает высокую масштабируемость, тестируемость и поддерживаемость кода.
-
 ### Читабельность кода: 
 Я уделил особое внимание написанию читаемого и понятного кода, используя осмысленные имена переменных и методов, следуя принципам чистого кода.
 
@@ -34,9 +31,6 @@ I used the latest UI library from Google, Jetpack Compose, to create the applica
 
 ### Network Integration: 
 I used Retrofit to retrieve data about characters and locations from the "Rick and Morty" API.
-
-### Clean Architecture: 
-I applied the principles of clean architecture, dividing the application into several layers (presentation, domain logic, data), which ensures high scalability, testability, and maintainability of the code.
 
 ### Code Readability: 
 I paid special attention to writing readable and understandable code, using meaningful variable and method names, following the principles of clean code.
