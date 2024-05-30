@@ -16,6 +16,8 @@ Rick and Morty Wiki - это приложение, которое отображ
 ### Читабельность кода: 
 Я уделил особое внимание написанию читаемого и понятного кода, используя осмысленные имена переменных и методов, следуя принципам чистого кода.
 
+*Сборка стандартная: (Build -> Build App Bundle(s) / APK(s) -> Build APK(s))*
+
 Я надеюсь, что этот проект продемонстрирует мои навыки и опыт в разработке Android-приложений с использованием Kotlin. Буду рад ответить на любые вопросы или обсудить дальнейшие детали. Спасибо за рассмотрение моей кандидатуры!
 
 *************************
@@ -38,5 +40,7 @@ I applied the principles of clean architecture, dividing the application into se
 
 ### Code Readability: 
 I paid special attention to writing readable and understandable code, using meaningful variable and method names, following the principles of clean code.
+
+*Standard build: (Build -> Build App Bundle(s) / APK(s) -> Build APK(s))*
 
 I hope this project will demonstrate my skills and experience in Android development using Kotlin. I will be happy to answer any questions or discuss further details. Thank you for considering my candidacy!
