@@ -71,22 +71,22 @@ fun PaginationScreen(
                     Toast.LENGTH_LONG
                 ).show()
             }
-        }
-        else{
-        LazyColumn(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(top = 10.dp, start = 10.dp, end = 10.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            items(pagingData.itemCount) { index ->
-                val character = pagingData[index]
-                if (character != null) {
-                    CharacterItem(character = character, onItemClick = onItemClick)
+        } else {
+            LazyColumn(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = 10.dp, start = 10.dp, end = 10.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                items(pagingData.itemCount) { index ->
+                    val character = pagingData[index]
+                    if (character != null) {
+                        CharacterItem(character = character, onItemClick = onItemClick)
+                    }
                 }
             }
         }
-    }}
+    }
 }
 
 

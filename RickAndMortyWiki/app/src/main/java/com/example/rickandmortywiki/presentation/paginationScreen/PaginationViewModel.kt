@@ -24,6 +24,6 @@ class PaginationViewModel : ViewModel() {
 
     val pagingData: Flow<PagingData<Character>> = Pager(
         config = PagingConfig(pageSize = PAGE_SIZE),
-        pagingSourceFactory = {  CharacterPagingSource(Api.retrofit,  _throwable) }
+        pagingSourceFactory = { CharacterPagingSource(Api.retrofit, _throwable) }
     ).flow.cachedIn(viewModelScope)
 }

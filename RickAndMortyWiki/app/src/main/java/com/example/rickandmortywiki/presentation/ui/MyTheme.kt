@@ -1,4 +1,4 @@
-package com.example.rickandmortywiki.ui
+package com.example.rickandmortywiki.presentation.ui
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable

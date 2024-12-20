@@ -23,7 +23,7 @@ class LocationViewModel : ViewModel() {
     private val pagingSource = LocationPagingSource(Api.retrofit, _throwable)
 
     val pagingData: Flow<PagingData<LocationItem>> = Pager(
-        config = PagingConfig(pageSize = Api.pageSize),
+        config = PagingConfig(pageSize = Api.PAGE_SIZE),
         pagingSourceFactory = { pagingSource }
     ).flow.cachedIn(viewModelScope)
 }

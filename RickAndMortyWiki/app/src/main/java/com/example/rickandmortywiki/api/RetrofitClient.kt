@@ -21,12 +21,12 @@ interface Api {
     fun loadLocationList(@Query("page") page: Int): Call<LocationResponse>
 
     companion object {
-        const val pageSize = 20
+        const val PAGE_SIZE = 20
 
-        val interceptor = HttpLoggingInterceptor()
+        private val interceptor = HttpLoggingInterceptor()
             .setLevel(HttpLoggingInterceptor.Level.BODY)
 
-        val client = OkHttpClient.Builder()
+        private val client = OkHttpClient.Builder()
             .addInterceptor(interceptor)
             .build()
 

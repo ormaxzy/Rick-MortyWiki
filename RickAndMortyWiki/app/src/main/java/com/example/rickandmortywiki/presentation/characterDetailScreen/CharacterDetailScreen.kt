@@ -115,7 +115,9 @@ fun CharacterDetailScreen(character: Character) {
                 disabledContainerColor = Color(0xFF424242),
                 disabledContentColor = Color(0xFF2b2d30)
             ),
-            modifier = Modifier.align(Alignment.BottomStart).padding(10.dp)
+            modifier = Modifier
+                .align(Alignment.BottomStart)
+                .padding(10.dp)
         ) {
             Text("Back")
         }
