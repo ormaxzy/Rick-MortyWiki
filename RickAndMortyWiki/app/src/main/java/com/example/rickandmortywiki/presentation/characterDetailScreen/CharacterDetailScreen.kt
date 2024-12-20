@@ -24,12 +24,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
+import com.example.rickandmortywiki.R
 import com.example.rickandmortywiki.api.Character
 
 
@@ -71,25 +73,25 @@ fun CharacterDetailScreen(character: Character) {
                     modifier = Modifier.padding(bottom = 8.dp)
                 )
 
-                Text("Live status:", color = Color.White)
+                Text(stringResource(R.string.live_status), color = Color.White)
                 Text(character.status, color = Color.White)
 
                 Spacer(modifier = Modifier.height(6.dp))
 
-                Text("Species and Gender:", color = Color.White)
+                Text(stringResource(R.string.species_and_gender), color = Color.White)
                 Text("${character.species} (${character.gender})", color = Color.White)
 
                 Spacer(modifier = Modifier.height(6.dp))
 
-                Text("Last known location:", color = Color.White)
+                Text(stringResource(R.string.last_known_location), color = Color.White)
                 Text(character.location.name, color = Color.White)
 
                 Spacer(modifier = Modifier.height(6.dp))
 
-                Text("First seen in:", color = Color.White)
+                Text(stringResource(R.string.first_seen_in), color = Color.White)
                 val episodeUrl = character.episode[0]
                 val episodeNumber = episodeUrl.substringAfterLast("/")
-                Text("Episode $episodeNumber", color = Color.White)
+                Text(stringResource(R.string.episode) +episodeNumber, color = Color.White)
             }
         }
 
@@ -102,7 +104,7 @@ fun CharacterDetailScreen(character: Character) {
         ) {
             items(character.episode) { episodeUrl ->
                 val episodeNumber = episodeUrl.substringAfterLast("/").toInt()
-                Text("Episode $episodeNumber", color = Color.White)
+                Text(stringResource(R.string.episode) +episodeNumber, color = Color.White)
             }
         }
         Button(
@@ -119,7 +121,7 @@ fun CharacterDetailScreen(character: Character) {
                 .align(Alignment.BottomStart)
                 .padding(10.dp)
         ) {
-            Text("Back")
+            Text(stringResource(R.string.back))
         }
     }
 }

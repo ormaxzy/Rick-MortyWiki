@@ -30,6 +30,8 @@ import com.bumptech.glide.integration.compose.GlideImage
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.res.stringResource
+import com.example.rickandmortywiki.R
 
 
 @Composable
@@ -58,7 +60,7 @@ fun PaginationScreen(
                     .padding(16.dp)
             ) {
                 Text(
-                    text = "ПЕРЕЗАГРУЗИТЬ",
+                    text = stringResource(R.string.reload),
                     color = Color.White,
                     fontSize = 16.sp
                 )
@@ -67,7 +69,7 @@ fun PaginationScreen(
             LaunchedEffect(throwable) {
                 Toast.makeText(
                     context,
-                    "Ошибка: ${throwable?.message}",
+                    context.getString(R.string.error)+throwable?.message,
                     Toast.LENGTH_LONG
                 ).show()
             }
@@ -136,7 +138,7 @@ fun CharacterItem(character: Character, onItemClick: (Character) -> Unit) {
                         .size(10.dp)
                         .background(
                             shape = CircleShape,
-                            color = if (character.status == "Alive") Color.Green else Color.Red
+                            color = if (character.status == stringResource(R.string.alive)) Color.Green else Color.Red
                         )
                 )
                 Text(
@@ -160,7 +162,7 @@ fun CharacterItem(character: Character, onItemClick: (Character) -> Unit) {
             }
 
             Text(
-                text = "Last known location:",
+                text = stringResource(R.string.last_known_location),
                 color = Color(0xFF949494),
                 fontSize = 13.sp,
                 modifier = Modifier.padding(10.dp)
