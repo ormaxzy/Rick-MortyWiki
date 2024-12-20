@@ -70,7 +70,7 @@ fun LocationItemCard(locationItem: LocationItem) {
                 style = TextStyle(color = Color.White)
             )
             Text(
-                text = stringResource(R.string.was_created) +{locationItem.created.take(10)},
+                text = stringResource(R.string.was_created) +locationItem.created.take(10),
                 style = TextStyle(color = Color.White)
             )
         }
